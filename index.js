@@ -40,7 +40,7 @@ const commonOpts = {
 
 console.log(`🏷  given tag is "${tagName}"`);
 
-const tagRef = `${tagName}`;
+const tagRef = `releases/tag/${tagName}`;
 
 async function deleteTag() {
   try {
