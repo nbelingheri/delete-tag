@@ -1,0 +1,19 @@
+name: Delete tag
+description: Delete designated tag upon request.
+author: "nbelingheri"
+
+branding:
+  color: "red"
+  icon: "delete"
+
+inputs:
+  tag_name:
+    description: tag name
+    required: true
+  repo:
+    description: target repository as <owner>/<repository>
+    required: false
+
+runs:
+  using: "node12"
+  main: "index.js"
