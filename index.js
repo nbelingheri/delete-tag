@@ -40,11 +40,13 @@ const commonOpts = {
 
 console.log(`🏷  given tag is "${tagName}"`);
 
+const tagRef = `refs/tags/${tagName}`;
+
 async function deleteTag() {
   try {
     const _ = await fetch({
       ...commonOpts,
-      path: `/repos/${owner}/${repo}/git/refs/tags/${tagName}`,
+      path: `/repos/${owner}/${repo}/git/${tagRef}`,
       method: "DELETE",
     });
 
